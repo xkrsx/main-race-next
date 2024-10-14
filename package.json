@@ -10,19 +10,25 @@
     "start": "next start"
   },
   "dependencies": {
+    "dotenv-safe": "^9.1.0",
     "next": "15.0.0-canary.187",
+    "postgres": "^3.4.4",
     "react": "19.0.0-rc-70fb1363-20241010",
     "react-dom": "19.0.0-rc-70fb1363-20241010",
     "sass": "^1.79.5"
   },
   "devDependencies": {
+    "@ts-safeql/eslint-plugin": "^3.4.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^9.12.0",
-    "eslint-config-upleveled": "^8.7.4",
+    "eslint-config-upleveled": "^8.8.0",
+    "libpg-query": "16.2.0",
     "postcss": "^8",
     "prettier": "^3.3.3",
+    "prettier-plugin-embed": "^0.4.15",
+    "prettier-plugin-sql": "^0.18.1",
     "stylelint": "^16.10.0",
     "stylelint-config-upleveled": "^1.1.5",
     "tailwindcss": "^3.4.1",
