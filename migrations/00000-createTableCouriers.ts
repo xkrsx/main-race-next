@@ -5,10 +5,10 @@ export async function up(sql: Sql) {
     CREATE TABLE couriers (
       id serial PRIMARY KEY,
       number int UNIQUE NOT NULL,
-      name varchar(100) NOT NULL,
+      name varchar(30) NOT NULL,
       points int DEFAULT 0,
       penalties int DEFAULT 0,
-      password_hash varchar(100) NOT NULL
+      password_hash varchar(80) NOT NULL
     )
   `;
 }
