@@ -3,7 +3,7 @@ import type { Sql } from 'postgres';
 export async function up(sql: Sql) {
   await sql`
     CREATE TABLE couriers (
-      id serial PRIMARY KEY,
+      id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
       number int UNIQUE NOT NULL,
       name varchar(30) NOT NULL,
       points int DEFAULT 0,
