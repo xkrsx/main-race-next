@@ -8,7 +8,7 @@ export async function up(sql: Sql) {
       name varchar(100) NOT NULL,
       points int DEFAULT 0,
       penalties int DEFAULT 0,
-      password varchar(100) NOT NULL
+      password_hash varchar(100) NOT NULL
     )
   `;
 }
