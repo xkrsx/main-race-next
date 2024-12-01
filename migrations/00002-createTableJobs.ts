@@ -3,7 +3,7 @@ import type { Sql } from 'postgres';
 export async function up(sql: Sql) {
   await sql`
     CREATE TABLE jobs (
-      id serial PRIMARY KEY,
+      id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
       cp_a int REFERENCES checkpoints (id) ON DELETE cascade,
       code_a varchar(50) NOT NULL,
       cp_b int REFERENCES checkpoints (id) ON DELETE cascade,

@@ -3,7 +3,7 @@ import type { Sql } from 'postgres';
 export async function up(sql: Sql) {
   await sql`
     CREATE TABLE couriers_jobs (
-      id serial PRIMARY KEY,
+      id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
       id_courier int REFERENCES couriers (id) ON DELETE cascade,
       id_job int REFERENCES jobs (id) ON DELETE cascade,
       finished boolean DEFAULT FALSE,
