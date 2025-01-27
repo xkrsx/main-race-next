@@ -1,11 +1,14 @@
-type Courier = {
+export type NewCourier = {
   id: number;
   number: number;
+};
+
+export type Courier = NewCourier & {
   name: string;
   points: number;
   penalties: number;
 };
 
-type CourierWithPasswordHash = Courier & {
+export type CourierWithPasswordHash = Courier & {
   password_hash: string;
 };
