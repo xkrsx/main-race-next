@@ -5,6 +5,12 @@ export default function Nav() {
     <ul>
       <li>MENU</li>
       <li>
+        <Link href="/register">register</Link>
+      </li>
+      <li>
+        <Link href="/login">login</Link>
+      </li>
+      <li>
         <Link href="/race">race</Link>
       </li>
       <li>

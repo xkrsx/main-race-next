@@ -1,6 +1,6 @@
 export type NewCourier = {
   id: number;
-  number: number;
+  number: string;
 };
 
 export type Courier = NewCourier & {

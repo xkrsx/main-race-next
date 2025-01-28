@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export default function RegisterForm() {
-  const [newUser, setNewUser] = useState({
+  const [newCourier, setNewCourier] = useState({
     number: '',
     password: '',
     confirmPassword: '',
@@ -18,7 +18,7 @@ export default function RegisterForm() {
     const response = await fetch('/api/register', {
       method: 'POST',
       body: JSON.stringify({
-        newUser,
+        newCourier,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -43,8 +43,8 @@ export default function RegisterForm() {
 
     // setErrors([]);
 
-    setNewUser({
-      ...newUser,
+    setNewCourier({
+      ...newCourier,
       [event.target.name]: value,
     });
   }
@@ -60,30 +60,33 @@ export default function RegisterForm() {
       <label>
         race number
         <input
+          className="style: border 1px"
           required
           type="number"
           name="number"
-          value={newUser.number}
+          value={newCourier.number}
           onChange={handleChange}
         />
       </label>
       <label>
         password
         <input
+          className="style: border 1px"
           required
           type="password"
           name="password"
-          value={newUser.password}
+          value={newCourier.password}
           onChange={handleChange}
         />
       </label>
       <label>
         confirm password
         <input
+          className="style: border 1px"
           required
           type="password"
           name="confirmPassword"
-          value={newUser.confirmPassword}
+          value={newCourier.confirmPassword}
           onChange={handleChange}
         />
       </label>
